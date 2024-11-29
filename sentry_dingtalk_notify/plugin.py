@@ -119,4 +119,12 @@ class DingTalkNotifyPlugin(CorePluginMixin, notify.NotificationPlugin):
         }
 
         for webhook_url in self.get_webhook_urls(group.project):
-            requests.post(webhook_url, data=json.dumps(data), headers=headers)
+            arr=webhook_url1.split("&")
+            url=arr[0]
+            flag=''
+
+            if len(arr) > 1:
+                flag= arr[1].split('=')[1]
+
+            if flag in group['message']:
+                requests.post(url, data=json.dumps(data), headers=headers)
