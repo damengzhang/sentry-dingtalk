@@ -16,12 +16,12 @@ Sentry 集成钉钉机器人通知
 ### 安装
 1. 使用 `pip` 命令
     ```bash
-    $ pip install sentry-dingtalk-notify
+    $ pip install sentry-dingtalk
     ```
 
 2. 写入依赖文件 `onpremise-xxx/sentry/requirements.txt`
     ```bash
-    $ echo sentry-dingtalk-notify >> requirements.txt
+    $ echo sentry-dingtalk >> requirements.txt
     ```
 
 ### 钉钉机器人
