@@ -119,7 +119,7 @@ class DingTalkNotifyPlugin(CorePluginMixin, notify.NotificationPlugin):
         }
 
         for webhook_url in self.get_webhook_urls(group.project):
-            arr=webhook_url1.split("&")
+            arr=webhook_url.split("&")
             url=arr[0]
             flag=''
 
