@@ -8,6 +8,7 @@ Sentry 集成钉钉机器人通知
 ## 特性
 - 发送异常通知到钉钉
 - 支持钉钉机器人webhook设置关键字
+- 支持配置多个钉钉机器人，并根据 flag 标记将特定消息发送到不同的机器人
 - 配置环境变量
   - DINGTALK_WEBHOOK: Optional(string)
   - DINGTALK_CUSTOM_KEYWORD: Optional(string)
