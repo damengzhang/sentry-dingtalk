@@ -1,8 +1,8 @@
 """
-  @Project     : sentry-dingtalk-notify
-  @Time        : 2021/07/17 18:24:53
+  @Project     : sentry-dingtalks-notify
+  @Time        : 2024/12/2 11:24:53
   @File        : setup.py
-  @Author      : lanxuexing
+  @Author      : damengzhang
   @Software    : VSCode
   @Desc        : 
 """
@@ -16,11 +16,11 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = 'sentry-dingtalk-notify'
+NAME = 'sentry-dingtalks-notify'
 DESCRIPTION = 'A sentry extension integrates DingTalk robot webhook'
-URL = 'https://github.com/lanxuexing/sentry-dingtalk-notify'
-EMAIL = 'lanxuexing313wsr@163.com'
-AUTHOR = 'lanxuexing'
+URL = 'https://github.com/damengzhang/sentry-dingtalks-notify'
+EMAIL = 'damengzhang@163.com'
+AUTHOR = 'damengzhang'
 REQUIRES_PYTHON = '>=3.6.13'
 VERSION = '1.0.0'
 
@@ -115,7 +115,7 @@ setup(
     # py_modules=['mypackage'],
 
     entry_points={
-        "sentry.plugins": ["sentry_dingtalk_notify = sentry_dingtalk_notify.plugin:DingTalkNotifyPlugin"],
+        "sentry.plugins": ["sentry_dingtalks_notify = sentry_dingtalks_notify.plugin:DingTalksNotifyPlugin"],
     },
     install_requires=REQUIRED,
     extras_require=EXTRAS,

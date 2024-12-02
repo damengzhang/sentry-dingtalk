@@ -1,8 +1,8 @@
 """
-  @Project     : sentry-dingtalk-notify
-  @Time        : 2021/07/17 18:24:53
+  @Project     : sentry-dingtalks-notify
+  @Time        : 2024/12/2 12:24:53
   @File        : plugin.py
-  @Author      : lanxuexing
+  @Author      : damengzhang
   @Software    : VSCode
   @Desc        : 
 """
@@ -17,18 +17,18 @@ from sentry_plugins.base import CorePluginMixin
 from django.conf import settings
 
 
-class DingTalkNotifyPlugin(CorePluginMixin, notify.NotificationPlugin):
-    title = "DingTalk Notify"
-    slug = "dingtalknotify"
+class DingTalksNotifyPlugin(CorePluginMixin, notify.NotificationPlugin):
+    title = "DingTalks Notify"
+    slug = "dingtalksnotify"
     description = "Post notifications to Dingtalk."
-    conf_key = "dingtalknotify"
+    conf_key = "dingtalksnotify"
     required_field = "webhook"
-    author = "lanxuexing"
-    author_url = "https://github.com/lanxuexing/sentry-dingtalk-notify"
+    author = "damengzhang"
+    author_url = "https://github.com/damengzhang/sentry-dingtalks-notify"
     version = "1.0.0"
     resource_links = [
-        ("Report Issue", "https://github.com/lanxuexing/sentry-dingtalk-notify/issues"),
-        ("View Source", "https://github.com/lanxuexing/sentry-dingtalk-notify"),
+        ("Report Issue", "https://github.com/damengzhang/sentry-dingtalks-notify/issues"),
+        ("View Source", "https://github.com/damengzhang/sentry-dingtalks-notify"),
     ]
 
     feature_descriptions = [
@@ -97,7 +97,7 @@ class DingTalkNotifyPlugin(CorePluginMixin, notify.NotificationPlugin):
     def _post(self, group, project):
         custom_keyword = self.get_option("custom_keyword", project)
 
-        issue_link = group.get_absolute_url(params={"referrer": "dingtalknotify"})
+        issue_link = group.get_absolute_url(params={"referrer": "dingtalksnotify"})
 
         payload = f"## {custom_keyword}\n\n" if custom_keyword else ""
         payload = f"{payload} #### Project: {project.name} \n\n"
