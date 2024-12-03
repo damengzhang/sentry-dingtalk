@@ -1,5 +1,5 @@
 """
-  @Project     : sentry-dingtalks-notify
+  @Project     : sentry_dingtalks_notify
   @Time        : 2024/12/2 12:24:53
   @File        : plugin.py
   @Author      : damengzhang
@@ -24,11 +24,11 @@ class DingTalksNotifyPlugin(CorePluginMixin, notify.NotificationPlugin):
     conf_key = "dingtalksnotify"
     required_field = "webhook"
     author = "damengzhang"
-    author_url = "https://github.com/damengzhang/sentry-dingtalks-notify"
+    author_url = "https://github.com/damengzhang/sentry_dingtalks_notify"
     version = "1.0.0"
     resource_links = [
-        ("Report Issue", "https://github.com/damengzhang/sentry-dingtalks-notify/issues"),
-        ("View Source", "https://github.com/damengzhang/sentry-dingtalks-notify"),
+        ("Report Issue", "https://github.com/damengzhang/sentry_dingtalks_notify/issues"),
+        ("View Source", "https://github.com/damengzhang/sentry_dingtalks_notify"),
     ]
 
     feature_descriptions = [
