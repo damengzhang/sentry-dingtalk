@@ -126,5 +126,5 @@ class DingTalksNotifyPlugin(CorePluginMixin, notify.NotificationPlugin):
             if len(arr) > 1:
                 flag= arr[1].split('=')[1]
 
-            if flag in group['message']:
+            if flag in group.message:
                 requests.post(url, data=json.dumps(data), headers=headers)
