@@ -17,7 +17,7 @@ from setuptools import find_packages, setup, Command
 
 # Package meta-data.
 NAME = 'sentry-dingtalks-notify'
-DESCRIPTION = 'A sentry extension integrates DingTalk robot webhook'
+DESCRIPTION = 'A sentry extension integrates DingTalks robot webhook'
 URL = 'https://github.com/damengzhang/sentry-dingtalks-notify'
 EMAIL = 'damengzhang@163.com'
 AUTHOR = 'damengzhang'
@@ -100,7 +100,7 @@ class UploadCommand(Command):
 # Where the magic happens:
 setup(
     name=NAME,
-    keywords="sentry dingtalk",
+    keywords="sentry dingtalks",
     version=about['__version__'],
     description=DESCRIPTION,
     long_description=long_description,

@@ -1,4 +1,4 @@
-# Sentry DingTalk
+# Sentry DingTalks
 
 Sentry 集成钉钉机器人通知
 
