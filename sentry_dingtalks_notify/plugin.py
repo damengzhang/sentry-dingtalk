@@ -15,6 +15,8 @@ from sentry.utils import json
 from sentry.integrations import FeatureDescription, IntegrationFeatures
 from sentry_plugins.base import CorePluginMixin
 from django.conf import settings
+import logging
+logger = logging.getLogger(__name__)
 
 
 class DingTalksNotifyPlugin(CorePluginMixin, notify.NotificationPlugin):
@@ -122,9 +124,17 @@ class DingTalksNotifyPlugin(CorePluginMixin, notify.NotificationPlugin):
             arr=webhook_url.split("&")
             url=arr[0]
             flag=''
+            logger.error('sentry_dingtalks_notify webhook_url: %s', webhook_url)
+            logger.error('sentry_dingtalks_notify arr: %s', arr)
+            logger.error('sentry_dingtalks_notify len(arr): %s', len(arr))
+            logger.error('sentry_dingtalks_notify url: %s', url)
 
             if len(arr) > 1:
                 flag= arr[1].split('=')[1]
+            
+            logger.error('sentry_dingtalks_notify flag: %s', flag)
+            logger.error('sentry_dingtalks_notify group.message: %s', group.message)
 
             if flag in group.message:
                 requests.post(url, data=json.dumps(data), headers=headers)
+                logger.error('sentry_dingtalks_notify flag in message: %s %s', flag , group.message)
